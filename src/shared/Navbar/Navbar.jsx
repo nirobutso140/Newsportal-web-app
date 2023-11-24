@@ -1,5 +1,4 @@
 import './Navbar.css'
-import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
@@ -14,11 +13,11 @@ const Navbar = () => {
           >Home</NavLink></li>
 
 
-          <li><NavLink to='/addservice'
+          <li><NavLink to='/AddArticle'
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
             }
-          >Add Service</NavLink></li>
+          >Add Article</NavLink></li>
           <li><NavLink to='/manage'
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "text-fuchsia-600" : ""

@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import Layout from './Layout/Layout';
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
+import Artical from './pages/ArticleAdding/Artical';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home/>,
+      },
+      {
+        path: "/AddArticle",
+        element: <Artical/>
       },
       {
         path: "/Register",

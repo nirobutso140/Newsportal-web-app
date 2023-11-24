@@ -1,5 +1,6 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
+import Title from '../../components/Container/Title';
 
 const Login = () => {
     return (
@@ -8,7 +9,7 @@ const Login = () => {
                 <div className="hero min-h-screen">
                     <div className="hero-content flex-col">
                         <div className="text-center lg:text-left">
-                            <h1 className="text-5xl text-fuchsia-600 font-bold">Login now!</h1>
+                           <Title> Login now!</Title>
                         </div>
                         <div className="card flex-shrink-0 w-full max-w-sm bg-base-100">
                             <form className="card-body">
