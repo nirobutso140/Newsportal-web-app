@@ -12,7 +12,7 @@ const Artical = () => {
                     <div className="mb-8">
                         <div className="form-control w-full">
                             <label className="label">
-                               <span className="label-text">Your Name</span>
+                               <span className="label-text text-green-600">Your Name</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="service" placeholder="Service Name" className="input input-bordered w-full" />
@@ -20,7 +20,7 @@ const Artical = () => {
                         </div>
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text">Your Name</span>
+                                <span className="label-text text-green-600">Your Name</span>
                             </label>
                             <label className="input-group w-full">
                                 <input type="text" name="name" placeholder="Your Name" className="input input-bordered w-full"  readOnly />
@@ -31,7 +31,7 @@ const Artical = () => {
                     <div className="mb-8">
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text">Your Email</span>
+                                <span className="label-text text-green-600">Your Email</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="email" placeholder="Your Email" className="input input-bordered w-full" readOnly />
@@ -39,7 +39,7 @@ const Artical = () => {
                         </div>
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text">Service Price</span>
+                                <span className="label-text text-green-600">Service Price</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="price" placeholder="Service Price" className="input input-bordered w-full" />
@@ -50,7 +50,7 @@ const Artical = () => {
                     <div className="mb-8">
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text">Service Area</span>
+                                <span className="label-text text-green-600">Service Area</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="area" placeholder="Service Area" className="input input-bordered w-full" />
