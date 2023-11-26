@@ -1,20 +1,21 @@
 
 import { useContext, useState } from "react";
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Title from '../../components/Container/Title';
 import swal from "sweetalert";
 import { AuthContext } from "../../provider/AuthProvider";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const Register = () => {
 
-
+    const axiosPublic = useAxiosPublic()
     const [registerError, setRegisterError] = useState('')
     const [success, setSuccess] = useState('')
-    const {createUser} = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
     console.log(createUser);
     const navigate = useNavigate()
-    
+
 
     const handleSignUp = e => {
         e.preventDefault();
@@ -25,22 +26,31 @@ const Register = () => {
         setSuccess('')
         const uppercaseRegex = /[A-Z]/;
         const specialCharacterRegex = /[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/;
-        if(!uppercaseRegex.test(password) && !specialCharacterRegex.test(password)){
-          setRegisterError('Error!!! You have to give any uppercase character and special character')
-          return ;
+        if (!uppercaseRegex.test(password) && !specialCharacterRegex.test(password)) {
+            setRegisterError('Error!!! You have to give any uppercase character and special character')
+            return;
         }
         createUser(email, password)
-        .then(result =>{
-            console.log(result.user);
-            setSuccess('Congratulation!!! Your Account Created Successfully')
-            e.target.reset()
-            swal("Congratulation", "your account created successfully", "success");
-            navigate('/')
-        })
-        .catch(error =>{
-            console.error(error)
-            setRegisterError(error.message)
-        })
+            .then(result => {
+                const userInfo = {
+                    email
+                }
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                     console.log(res);
+                        if (res.data.insertedId) {
+                            setSuccess('Congratulation!!! Your Account Created Successfully')
+                            e.target.reset()
+                            swal("Congratulation", "your account created successfully", "success");
+                            navigate('/')
+                        }
+                    })
+
+            })
+            .catch(error => {
+                console.error(error)
+                setRegisterError(error.message)
+            })
     }
 
 

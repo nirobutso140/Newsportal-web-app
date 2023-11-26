@@ -12,6 +12,7 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import Artical from './pages/ArticleAdding/Artical';
 import AuthProvider from './provider/AuthProvider';
+import PrivetRoute from './privetRoutes/PrivetRoute';
 
 
 
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/AddArticle",
-        element: <Artical/>
+        element: <PrivetRoute><Artical/></PrivetRoute>
       },
       {
         path: "/Register",

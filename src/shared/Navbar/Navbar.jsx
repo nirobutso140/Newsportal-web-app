@@ -1,6 +1,20 @@
+import { useContext } from 'react';
 import './Navbar.css'
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
+
+  
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext)
+  console.log(user);
+
+  const handleLogOut = () => {
+      logOut()
+          .then(() => console.log("logout successfully"))
+          .catch(error => console.error(error))
+  }
+
+
   return (
     <>
       <div className="navbar">
@@ -22,7 +36,7 @@ const Navbar = () => {
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
             }
-          >Manage Service</NavLink></li>
+          >All Article</NavLink></li>
 
           <li><NavLink to='/myschedules'
             className={({ isActive, isPending }) =>
@@ -44,12 +58,12 @@ const Navbar = () => {
         <div className="userInfo_logout">
           {
 
-            // user ?
-            //   <>
-            //     <span>{user?.displayName}</span>
-            //     <button onClick={handleLogOut} className="btn btn-sm btn-secondary">Log out</button>
-            //   </>
-            //   :
+            user ?
+              <>
+                <span className='mr-2'>{user?.displayName}</span> 
+                <button onClick={handleLogOut} className="btn btn-sm btn-secondary">Log out</button>
+              </>
+              :
               <Link to='/login'>
                 <button className="btn btn-sm">Log in</button>
               </Link>
