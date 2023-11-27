@@ -8,7 +8,10 @@
     color: white;
     border-left: 3px solid #1ba177;
     height: 100vh;
+    margin-right: 100px;
+    width: 200px;
 }
+
 .sideBar li{
     margin: 30px 0; 
 }

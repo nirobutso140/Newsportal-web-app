@@ -20,8 +20,10 @@ const Register = () => {
     const handleSignUp = e => {
         e.preventDefault();
         const form = e.target;
+        const name = form.name.value
         const email = form.email.value;
         const password = form.password.value;
+        const photo = form.photo.value
         setRegisterError('')
         setSuccess('')
         const uppercaseRegex = /[A-Z]/;
@@ -33,7 +35,7 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const userInfo = {
-                    email
+                    email, name, photo
                 }
                 axiosPublic.post('/users', userInfo)
                     .then(res => {
@@ -75,6 +77,12 @@ const Register = () => {
                                         <span className="label-text">Email</span>
                                     </label>
                                     <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Photo URL</span>
+                                    </label>
+                                    <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
