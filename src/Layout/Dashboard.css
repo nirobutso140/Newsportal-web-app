@@ -4,10 +4,11 @@
 }
 .sideBar{
     background-color: #010313;
-    padding: 20px 30px;
+    padding: 20px 40px;
     color: white;
-    border-right: 3px solid #1ba177
+    border-left: 3px solid #1ba177;
+    height: 100vh;
 }
 .sideBar li{
-    margin: 20px 0;
+    margin: 30px 0; 
 }

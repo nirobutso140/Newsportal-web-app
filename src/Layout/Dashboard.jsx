@@ -1,5 +1,9 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import { FaUserFriends } from "react-icons/fa";
+import { MdOutlineArticle } from "react-icons/md";
+import { IoMdPersonAdd } from "react-icons/io";
+import { IoHome } from "react-icons/io5";
 import './Dashboard.css'
 
 const Dashboard = () => {
@@ -8,40 +12,30 @@ const Dashboard = () => {
             <div className="dashboard">
                 <div className="sideBar">
                     <p className='nav_logo'>UPCOMMING</p>
-                    <li><NavLink to='dashboard/allusers'
+                    
+                    <li><NavLink to='allusers'
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                         }
-                    >All Users</NavLink></li>
+                    ><span><FaUserFriends /></span> <span>All Users</span></NavLink></li>
 
 
                     <li><NavLink to='dashboard/allarticls'
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                         }
-                    >All Articles</NavLink></li>
+                    ><MdOutlineArticle /> All Articles</NavLink></li>
                     <li><NavLink to='dashboard/addpublisher'
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                         }
-                    >Add Publisher</NavLink></li>
+                    ><IoMdPersonAdd /> Add Publisher</NavLink></li>
 
-                    <li><NavLink to='/myschedules'
+                    <li><NavLink to='/'
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                         }
-                    >My Schedules</NavLink></li>
-
-                    <li> <NavLink to='/login'
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
-                        }
-                    >Login</NavLink></li>
-                    <li><NavLink to='/register'
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
-                        }
-                    >Register</NavLink></li>
+                    ><IoHome /> Home</NavLink></li>
                 </div>
                 <div className="content">
                     <Outlet/>

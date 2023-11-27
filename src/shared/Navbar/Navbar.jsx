@@ -38,7 +38,7 @@ const Navbar = () => {
             }
           >All Article</NavLink></li>
 
-          <li><NavLink to='/dashboard'
+          <li><NavLink to='dashboard/allusers'
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
             }
