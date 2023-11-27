@@ -13,6 +13,10 @@ import Login from './pages/Login/Login';
 import Artical from './pages/ArticleAdding/Artical';
 import AuthProvider from './provider/AuthProvider';
 import PrivetRoute from './privetRoutes/PrivetRoute';
+import Dashboard from './Layout/Dashboard';
+import AllUsers from './pages/AdminPages/AllUsers/AllUsers';
+import AllArticles from './pages/AdminPages/AllArticles/AllArticles';
+import AddPublisher from './pages/AdminPages/AddPublisher/AddPublisher';
 
 
 
@@ -37,8 +41,31 @@ const router = createBrowserRouter([
         path: "/Login",
         element: <Login/>, 
       },
+      {
+        path: "/dashboard",
+        element: <Dashboard/>
+      }
     ],
   },
+  {
+    path: 'dashboard',
+    element: <Dashboard/>,
+    children: [
+      {
+        path: 'dashboard/allusers',
+        element: <AllUsers/>,
+      },
+      {
+        path: 'dashboard/allarticls',
+        element: <AllArticles/>
+      },
+      {
+        path: "dashboard/addpublisher",
+        element: <AddPublisher/>
+      }
+
+    ]
+  }
 ]);
 
 

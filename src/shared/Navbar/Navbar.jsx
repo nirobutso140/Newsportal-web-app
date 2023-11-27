@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <img className="nav_logo" src="/image/rsz_attachment_104083548-removebg-preview.png" alt="" />
+        <p className='nav_logo'>UPCOMMING</p>
         <div className="links">
           <li><NavLink to='/'
             className={({ isActive, isPending }) =>
@@ -38,11 +38,11 @@ const Navbar = () => {
             }
           >All Article</NavLink></li>
 
-          <li><NavLink to='/myschedules'
+          <li><NavLink to='/dashboard'
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
             }
-          >My Schedules</NavLink></li>
+          >Dashboard</NavLink></li>
 
           <li> <NavLink to='/login'
             className={({ isActive, isPending }) =>

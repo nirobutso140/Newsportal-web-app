@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@100;200;300&family=Lato:wght@400;700;900&family=Manrope:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700;900&family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700;6..72,800&display=swap');
 .nav_logo{
     width: 100px;
 }
@@ -8,7 +8,7 @@
     justify-content: space-evenly;
     align-items: center;
     /* padding: 15px 0; */
-    color: gray
+    color: rgb(140, 140, 140)
 }
 .links{
     display: flex;
@@ -17,6 +17,10 @@
    margin:0 15px 0 15px;
    list-style: none;
    text-decoration: none;  
+}
+.nav_logo{
+  font-family: 'Newsreader', serif;
+  color: rgb(255, 37, 37);
 }
 
 @media only screen and (max-width: 600px) {
