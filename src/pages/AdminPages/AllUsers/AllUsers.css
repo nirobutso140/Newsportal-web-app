@@ -1,0 +1,9 @@
+.thead{
+    color: white;
+}
+.tbody{
+    color: rgb(201, 201, 201);
+}
+.admin{
+    cursor: pointer;
+}
