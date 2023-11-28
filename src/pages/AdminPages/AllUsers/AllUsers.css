@@ -6,4 +6,8 @@
 }
 .admin{
     cursor: pointer;
+    color: #0fdd9c;
+}
+.user{
+    color: darkorange;
 }

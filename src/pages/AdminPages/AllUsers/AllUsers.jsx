@@ -72,7 +72,7 @@ const AllUsers = () => {
                                             user.role === 'admin' ?
                                             <td className='admin'>Admin</td>
                                             :
-                                            <td onClick={() => handleMakeAdmin(user)} className='admin'>User</td>
+                                            <td onClick={() => handleMakeAdmin(user)} className='user'>User</td>
                                         }
                                         
                                     
