@@ -1,26 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import useAxiosPublic from '../../../hooks/useAxiosPublic';
+import useAxiosPublic from '../../../hooks/useAxiosPublic'
 import './AllPublisher.css'
+
 
 
 const AllPublisher = () => {
    const axiosPublic = useAxiosPublic()
    const [publisher, setPublisher] = useState([])
-   useEffect(()=>{
+   useEffect(() => {
       axiosPublic.get('/publisher')
-      .then(res => setPublisher(res.data))
-      
+         .then(res => setPublisher(res.data))
+
    }, [])
    console.log(publisher);
-    return (
-        <>
-           {
-             publisher.map(publish => <>
-               <p>hello</p>
-             </>)
-           }
-        </>
-    );
+   return (
+      <>
+   
+         <div className="publisher_container">
+            {
+               publisher.map(publish => <>
+                   <div className="publisher">
+                      <img src={publish.photo} alt="" />
+                      <p>{publish.name}</p>
+                   </div>
+               </>)
+            }
+         </div>
+      </>
+   );
 };
 
 export default AllPublisher;

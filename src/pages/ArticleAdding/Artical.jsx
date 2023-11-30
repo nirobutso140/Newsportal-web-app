@@ -5,6 +5,19 @@ import Select from 'react-select';
 
 const Artical = () => {
 
+    const handleAddArticle = (e) =>{
+         e.preventDefault()
+         const form = e.target
+         const title = form.title.value
+         const publisher = form.publisher.value
+         const description = form.description.value
+         const image = form.img.value
+         const option = Array.from(event.target.selectedOptions, (option) => option.value);
+
+         const info = {title,publisher,description,image,option}
+         console.log(info);
+    }
+
     const options = [
         { value: 'Technology', label: 'Technology' },
         { value: 'Business', label: 'Business' },
@@ -18,7 +31,7 @@ const Artical = () => {
 
             <div className="py-24 form">
                 <Title>Add Article</Title>
-                <form>
+                <form onSubmit={handleAddArticle}>
                     {/* form name and quantity row */}
                     <div className="mb-8">
                         <div className="form-control w-full">
@@ -26,7 +39,7 @@ const Artical = () => {
                                 <span className="label-text text-green-600">Title</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="service" placeholder="Title" className="input input-bordered w-full" />
+                                <input type="text" name="title" placeholder="Title" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control w-full">
@@ -34,7 +47,7 @@ const Artical = () => {
                                 <span className="label-text text-green-600">Publisher Name</span>
                             </label>
                             <label className="input-group w-full">
-                                <input type="text" name="name" placeholder="Publisher Name" className="input input-bordered w-full" readOnly />
+                                <input type="text" name="publisher" placeholder="Publisher Name" className="input input-bordered w-full"  />
                             </label>
                         </div>
                     </div>
@@ -45,15 +58,7 @@ const Artical = () => {
                                 <span className="label-text text-green-600">Article Description</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="email" placeholder="Article Description" className="input input-bordered w-full" readOnly />
-                            </label>
-                        </div>
-                        <div className="form-control w-full">
-                            <label className="label">
-                                <span className="label-text text-green-600">Service Price</span>
-                            </label>
-                            <label className="input-group">
-                                <input type="text" name="price" placeholder="Service Price" className="input input-bordered w-full" />
+                                <input type="text" name="description" placeholder="Article Description" className="input input-bordered w-full"  />
                             </label>
                         </div>
                     </div>
@@ -64,7 +69,15 @@ const Artical = () => {
                                 <span className="label-text text-green-600">Articles Tag</span>
                             </label>
                             <label className="input-group w-full">
-                               <Select options={options} isMulti/>
+                               <Select name="option" options={options} isMulti/>
+                            </label>
+                        </div>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text text-green-600">Select image</span>
+                            </label>
+                            <label className="input-group">
+                            <input type="file" id="img" name="img" accept="image/*"/>
                             </label>
                         </div>
                     </div>

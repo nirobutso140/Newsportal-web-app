@@ -5,8 +5,9 @@ import Plans from './Plans/Plans';
 const Home = () => {
     return (
         <>
-            <Plans/>
             <AllPublisher/>
+            <Plans/>
+           
         </>
     );
 };
