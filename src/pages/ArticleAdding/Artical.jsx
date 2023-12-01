@@ -32,7 +32,7 @@ const Artical = () => {
             console.log(res);
                if (res.data.insertedId) {
                    e.target.reset()
-                   swal("Great", "A Publisher Added Successfully", "success");
+                   swal("Great", "A Article Added Successfully", "success");
                }
            })
 
