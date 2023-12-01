@@ -34,6 +34,10 @@ const router = createBrowserRouter([
         element: <PrivetRoute><Artical/></PrivetRoute>
       },
       {
+        path: "/allarticles",
+        element: <PrivetRoute><AllArticles/> </PrivetRoute>
+      },
+      {
         path: "/Register",
         element: <Register/>, 
       },

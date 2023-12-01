@@ -32,7 +32,7 @@ const Navbar = () => {
               isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
             }
           >Add Article</NavLink></li>
-          <li><NavLink to='/manage'
+          <li><NavLink to='/allarticles'
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
             }
