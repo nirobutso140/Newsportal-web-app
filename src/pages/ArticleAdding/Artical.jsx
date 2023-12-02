@@ -1,5 +1,5 @@
 
-import Title from '../../components/Container/Title';
+import Title from '../../components/Title';
 import './Article.css'
 import Select from 'react-select';
 import useAxiosPublic from '../../hooks/useAxiosPublic'

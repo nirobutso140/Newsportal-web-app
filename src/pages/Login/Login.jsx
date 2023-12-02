@@ -1,6 +1,6 @@
 
 import { Link, useNavigate } from 'react-router-dom';
-import Title from '../../components/Container/Title';
+import Title from '../../components/Title';
 import swal from 'sweetalert';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import {  useState } from "react";

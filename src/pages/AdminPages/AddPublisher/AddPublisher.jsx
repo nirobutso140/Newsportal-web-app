@@ -1,7 +1,7 @@
 
 
 import swal from 'sweetalert';
-import Title from '../../../components/Container/Title';
+import Title from '../../../components/Title';
 import useAxiosPrivet from '../../../hooks/useAxiosPrivet';
 
 

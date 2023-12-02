@@ -2,7 +2,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Title from '../../components/Container/Title';
+import Title from '../../components/Title';
 import swal from "sweetalert";
 import { AuthContext } from "../../provider/AuthProvider";
 import useAxiosPublic from "../../hooks/useAxiosPublic";

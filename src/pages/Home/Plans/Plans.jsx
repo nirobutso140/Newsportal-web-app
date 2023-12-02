@@ -10,41 +10,29 @@ const Plans = () => {
                         <p>for small websites or blogs</p>
                     </div>
                     <p class="price">
-                        $2
+                        $0
                         <sub>/month</sub>
                     </p>
                     <ul class="features">
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>1 domain</strong> name
+                            <strong>Limited access to</strong> articles
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>10 GB</strong> of disk space
+                            <strong>Ad-supported</strong> content
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>100GB </strong>of bandwidth
+                            <strong>Basic</strong> features
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>1 MySQL</strong> database
+                            <strong>Basic</strong>  customer support
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>5 email</strong> accounts
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>cPanel</strong> control panel
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Free SSL</strong> certificate
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>24/7</strong> support
+                            <strong>Offline reading for a limited</strong> number of articles
                         </li>
                     </ul>
                     <button class="cta-btn">SELECT</button>
@@ -61,35 +49,27 @@ const Plans = () => {
                     <ul class="features">
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>Unlimited</strong> domain name
+                            <strong>Unlimited access to</strong> all articles
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>50 GB</strong> of disk space
+                            <strong>Ad-free</strong> experience
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>500GB </strong>of bandwidth
+                            <strong>Basic customization and</strong> offline reading
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>10 MySQL</strong> database
+                            <strong>Enhanced customization</strong> options
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>50 email</strong> accounts
+                            <strong>Access to</strong> global news sources
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>cPanel</strong> control panel
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Free SSL</strong> certificate
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>24/7</strong> support
+                            <strong>Language translation for</strong> select articles
                         </li>
                     </ul>
                     <button class="cta-btn">SELECT</button>
@@ -106,39 +86,31 @@ const Plans = () => {
                     <ul class="features">
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>Unlimited</strong> domain name
+                            <strong>All features of the</strong> Standard Plan
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>100 GB</strong> of disk space
+                            <strong>Early access to</strong> breaking news
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>1TB </strong>of bandwidth
+                            <strong>Exclusive interviews </strong>and articles
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>Unlimited MySQL</strong> database
+                            <strong>Premium</strong> customer support
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>Unlimited email</strong> accounts
+                            <strong>Access to news articles in </strong>audio format
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>cPanel</strong> control panel
+                            <strong>Advanced search </strong>and filtering options
                         </li>
                         <li>
                             <i class="fa-solid fa-check"></i>
-                            <strong>Free SSL</strong> certificate
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>24/7 priority</strong> support
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Advanced</strong> security features
+                            <strong>Multi-user licenses </strong>for businesses
                         </li>
                     </ul>
                     <button class="cta-btn">SELECT</button>

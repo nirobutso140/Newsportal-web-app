@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAxiosPublic from '../../../hooks/useAxiosPublic'
 import './AllPublisher.css'
+import Title from '../../../components/Title';
 
 
 
@@ -15,8 +16,10 @@ const AllPublisher = () => {
    console.log(publisher);
    return (
       <>
-   
+         <br /><br /><br /><br />
+         <Title>ALL PUBLISHER</Title>
          <div className="publisher_container">
+           
             {
                publisher.map(publish => <>
                    <div className="publisher">
