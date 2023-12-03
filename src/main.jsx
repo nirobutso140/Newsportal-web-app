@@ -18,13 +18,14 @@ import AllUsers from './pages/AdminPages/AllUsers/AllUsers';
 import AllArticles from './pages/AdminPages/AllArticles/AllArticles';
 import AddPublisher from './pages/AdminPages/AddPublisher/AddPublisher';
 import ArticleDetails from './pages/ArticleDetails/ArticleDetails';
-
+import Error from './pages/Error/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout/>,
+    errorElement: <Error/>,
     children: [
       {
         path: "/",
@@ -35,12 +36,12 @@ const router = createBrowserRouter([
         element: <PrivetRoute><Artical/></PrivetRoute>
       },
       {
-        path: "/allarticles/:id",
-        loder: ({parms}) => fetch(`http://localhost:5000/${parms.id}`),
+        path: "/allarticles",
         element: <PrivetRoute><AllArticles/></PrivetRoute>
       },
       {
         path: '/articleDetails/:id',
+        loader: ({params}) => fetch(`http://localhost:5000/articleDetails/${params.id}`),
         element: <PrivetRoute><ArticleDetails/></PrivetRoute>
       },
       {
@@ -54,7 +55,8 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <Dashboard/>
-      }
+      },
+ 
     ],
   },
   {

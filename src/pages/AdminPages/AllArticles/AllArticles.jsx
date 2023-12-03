@@ -17,7 +17,7 @@ const AllArticles = () => {
                     article.map(singleArticle=><>
                         <div className="hero">
                             <div className="hero-content flex-col lg:flex-row">
-                                <img src={singleArticle.image} className="max-w-sm rounded-lg shadow-2xl" />
+                                <img src={singleArticle.image} className="max-w-sm  " />
                                 <div>
                                     <h1 className="text-5xl font-bold text-white">{singleArticle.title}</h1>
                                     <div className='flex-article'>
