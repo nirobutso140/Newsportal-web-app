@@ -17,6 +17,7 @@ import Dashboard from './Layout/Dashboard';
 import AllUsers from './pages/AdminPages/AllUsers/AllUsers';
 import AllArticles from './pages/AdminPages/AllArticles/AllArticles';
 import AddPublisher from './pages/AdminPages/AddPublisher/AddPublisher';
+import ArticleDetails from './pages/ArticleDetails/ArticleDetails';
 
 
 
@@ -34,8 +35,13 @@ const router = createBrowserRouter([
         element: <PrivetRoute><Artical/></PrivetRoute>
       },
       {
-        path: "/allarticles",
-        element: <PrivetRoute><AllArticles/> </PrivetRoute>
+        path: "/allarticles/:id",
+        loder: ({parms}) => fetch(`http://localhost:5000/${parms.id}`),
+        element: <PrivetRoute><AllArticles/></PrivetRoute>
+      },
+      {
+        path: '/articleDetails/:id',
+        element: <PrivetRoute><ArticleDetails/></PrivetRoute>
       },
       {
         path: "/Register",
