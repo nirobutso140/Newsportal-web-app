@@ -23,8 +23,11 @@ const Artical = () => {
          const description = form.description.value
          const image = form.img.value
          const option = form.option.value
+         const author = form.author.value
+         const email = form.email.value
+         const date = form.date.value
 
-         const info = {title,publisher,description,image,option}
+         const info = {title,publisher,description,image,option,author,email,date}
          console.log(info);
 
          axiosPublic.post('/article', info)
@@ -73,16 +76,24 @@ const Artical = () => {
                         </div>
                     </div>
                     {/* form supplier row */}
-                    {/* <div className="mb-8">
+                    <div className="mb-8">
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text text-green-600">Article Description</span>
+                                <span className="label-text text-green-600">Article Author Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="description" placeholder="Article Description" className="input input-bordered w-full"  />
+                                <input type="text" name="author" placeholder="Article Author Name" className="input input-bordered w-full"  />
                             </label>
                         </div>
-                    </div> */}
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text text-green-600">Article Author Email</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="email" name="email" placeholder="Article Author Email" className="input input-bordered w-full"  />
+                            </label>
+                        </div>
+                    </div>
                     {/* form category and details row */}
                     <div className="mb-8">
                         <div className="form-control w-full">
@@ -93,13 +104,12 @@ const Artical = () => {
                                <Select name="option" options={options}/>
                             </label>
                         </div>
-                         <div className="form-control w-full">
+                        <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text text-green-600">Article Description</span>
+                                <span className="label-text text-green-600">Posted Date</span>
                             </label>
                             <label className="input-group">
-                                {/* <input type="text" name="description" placeholder="Article Description" className="input input-bordered w-full"  /> */}
-                                <textarea name="description" id="" cols="65" rows="5" placeholder="Article Description" className='w-full'></textarea>
+                                <input type="date" name="date" placeholder="Article Author Email" className="input input-bordered w-full"  />
                             </label>
                         </div>
                         <div className="form-control w-full">
@@ -109,6 +119,15 @@ const Artical = () => {
                             <label className="input-group">
                             {/* <input type="file" name="img" className="file-input file-input-bordered file-input-success w-full max-w-xs" /> */}
                             <input type="text" name="img" placeholder="Select image" className="input input-bordered w-full"  />
+                            </label>
+                        </div>
+                         <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text text-green-600">Article Description</span>
+                            </label>
+                            <label className="input-group">
+                                {/* <input type="text" name="description" placeholder="Article Description" className="input input-bordered w-full"  /> */}
+                                <textarea name="description" id="" cols="65" rows="5" placeholder="Article Description" className='w-full'></textarea>
                             </label>
                         </div>
                     </div>

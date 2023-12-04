@@ -19,6 +19,7 @@ import AllArticles from './pages/AdminPages/AllArticles/AllArticles';
 import AddPublisher from './pages/AdminPages/AddPublisher/AddPublisher';
 import ArticleDetails from './pages/ArticleDetails/ArticleDetails';
 import Error from './pages/Error/Error';
+import AdminAllArticle from './pages/AdminPages/AdminAllArticles/AdminAllArticle';
 
 
 const router = createBrowserRouter([
@@ -68,8 +69,8 @@ const router = createBrowserRouter([
         element: <AllUsers/>,
       },
       {
-        path: 'dashboard/allarticls',
-        element: <AllArticles/>
+        path: 'dashboard/adminallarticls',
+        element: <AdminAllArticle/>,
       },
       {
         path: "dashboard/addpublisher",

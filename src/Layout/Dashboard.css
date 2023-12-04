@@ -7,12 +7,13 @@
     padding: 20px 40px;
     color: white;
     border-left: 3px solid #1ba177;
-    height: 100vh;
+    height: 1000vh;
     margin-right: 60px;
     width: 200px;
 }
 .content_container{
-    width: 500px;
+    width: 800px;
+    /* height: 300px; */
 }
 
 .sideBar li{

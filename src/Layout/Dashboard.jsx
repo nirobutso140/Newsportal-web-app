@@ -24,7 +24,7 @@ const Dashboard = () => {
                             ><span><FaUserFriends /></span> <span>All Users</span></NavLink></li>
 
 
-                            <li><NavLink to='dashboard/allarticls'
+                            <li><NavLink to='dashboard/adminallarticls'
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                                 }
@@ -44,7 +44,7 @@ const Dashboard = () => {
                                 ><span><FaUserFriends /></span> <span>All Users</span></NavLink></li>
 
 
-                                <li><NavLink to='dashboard/allarticls'
+                                <li><NavLink to='dashboard/adminallarticls'
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                                     }
