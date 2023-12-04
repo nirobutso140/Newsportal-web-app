@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/articleDetails/:id',
-        loader: ({params}) => fetch(`http://localhost:5000/articleDetails/${params.id}`),
+        loader: ({params}) => fetch(`https://newsportal-server-one.vercel.app/articleDetails/${params.id}`),
         element: <PrivetRoute><ArticleDetails/></PrivetRoute>
       },
       {

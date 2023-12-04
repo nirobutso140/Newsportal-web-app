@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const axiosPrivet = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://newsportal-server-one.vercel.app',
 });
 
 const useAxiosPrivet = () => {

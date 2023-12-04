@@ -1,4 +1,7 @@
+# Live link: https://recreatenewsportal.web.app/
+
 # News Portal Web App : UPCOMMING
+# -> Some Feature of Project
 1. Create an admin panel
 2. Create Authentication system
 3. All Users Page : In this page show all the users with following information name,email,profile picture, and Make admin button in tabular format
